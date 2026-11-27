@@ -1,0 +1,1189 @@
+
+/* ==============================
+   GLOBAL STYLING
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: #242424;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* ==============================
+   NAVBAR
+================================ */
+
+.navbar {
+    width: 100%;
+    min-height: 72px;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    color: #262626;
+}
+
+.logo-text {
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.microsoft-icon {
+    display: grid;
+    grid-template-columns: repeat(2, 11px);
+    gap: 2px;
+}
+
+.microsoft-icon span {
+    width: 11px;
+    height: 11px;
+}
+
+.red {
+    background-color: #f25022;
+}
+
+.green {
+    background-color: #7fba00;
+}
+
+.blue {
+    background-color: #00a4ef;
+}
+
+.yellow {
+    background-color: #ffb900;
+}
+
+.nav-links,
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.navbar nav a,
+.nav-right a {
+    color: #262626;
+    font-size: 13px;
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.navbar nav a:hover,
+.nav-right a:hover {
+    color: #0067b8;
+    text-decoration: underline;
+}
+
+
+/* ==============================
+   HERO SECTION
+================================ */
+
+.hero {
+    min-height: 470px;
+    display: flex;
+    align-items: center;
+    padding: 70px 9%;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(255, 255, 255, 0.95),
+            rgba(255, 255, 255, 0.45)
+        ),
+        url("images/hero.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.hero-content {
+    width: 55%;
+    max-width: 620px;
+}
+
+.hero-tag,
+.section-tag {
+    display: inline-block;
+    color: #0067b8;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.hero-content h1 {
+    font-size: clamp(34px, 4vw, 50px);
+    line-height: 1.15;
+    font-weight: 650;
+    color: #171717;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    max-width: 510px;
+    font-size: 17px;
+    line-height: 1.8;
+    color: #404040;
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   BUTTONS
+================================ */
+
+.primary-button {
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: #0067b8;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
+.primary-button:hover {
+    background-color: #004e8c;
+    transform: translateY(-2px);
+}
+
+
+/* ==============================
+   PRODUCTS SECTION
+================================ */
+
+.products {
+    padding: 75px 8%;
+    background-color: #f5f8fc;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-heading h2 {
+    font-size: 34px;
+    line-height: 1.3;
+    color: #171717;
+    margin-bottom: 12px;
+}
+
+.section-heading p {
+    font-size: 16px;
+    color: #606060;
+}
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #e8e8e8;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.10);
+}
+
+.card-image {
+    width: 100%;
+    height: 175px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+.card-image img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: contain; */
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    font-size: 22px;
+    color: #202020;
+    margin-bottom: 12px;
+}
+
+.product-card p {
+    font-size: 15px;
+    line-height: 1.7;
+    color: #555555;
+    margin-bottom: 22px;
+    flex-grow: 1;
+}
+
+.product-card a {
+    display: inline-block;
+    width: fit-content;
+    color: #0067b8;
+    font-size: 15px;
+    font-weight: 650;
+}
+
+.product-card a span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.product-card a:hover {
+    text-decoration: underline;
+}
+
+.product-card a:hover span {
+    transform: translateX(5px);
+}
+
+
+/* ==============================
+   Surface Device Section
+================================ */
+
+.surface-section {
+    padding: 80px 9%;
+    background: linear-gradient(120deg, #eaf4ff, #d5e8fa);
+}
+
+.surface-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.surface-text {
+    flex: 1;
+}
+
+.surface-text h2 {
+    font-size: 38px;
+    line-height: 1.3;
+    color: #171717;
+    margin-bottom: 18px;
+}
+
+.surface-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #505050;
+    margin-bottom: 28px;
+}
+
+.surface-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.surface-image img {
+    width: 100%;
+    max-width: 500px;
+    height: 330px;
+    /* object-fit: contain; */
+    border-radius: 8px;
+}
+
+
+/* ==============================
+   WINDOWS 11 SECTION
+================================ */
+
+.windows-section {
+    padding: 85px 9%;
+    background: linear-gradient(120deg, #f0f6ff, #e2edfc);
+}
+
+.windows-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+}
+
+.windows-text {
+    flex: 1;
+}
+
+.windows-text h2 {
+    font-size: 40px;
+    line-height: 1.3;
+    color: #171717;
+    margin-bottom: 20px;
+}
+
+.windows-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #505050;
+    margin-bottom: 30px;
+}
+
+.windows-image {
+    flex: 1;
+}
+
+.windows-image img {
+    width: 100%;
+    max-width: 520px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+/* ==============================
+   Xbox Gaming Section
+================================ */
+
+.xbox-section {
+    padding: 85px 9%;
+    background: #101810;
+    color: #ffffff;
+}
+
+.xbox-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+}
+
+.xbox-image {
+    flex: 1;
+}
+
+.xbox-image img {
+    width: 100%;
+    max-width: 540px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.xbox-text {
+    flex: 1;
+}
+
+.xbox-tag {
+    display: inline-block;
+    color: #65c900;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 18px;
+}
+
+.xbox-text h2 {
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.xbox-text p {
+    color: #d0d0d0;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.xbox-button {
+    display: inline-block;
+    background: #65c900;
+    color: #101810;
+    padding: 13px 26px;
+    border-radius: 3px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.xbox-button:hover {
+    background: #8bea32;
+    transform: translateY(-3px);
+}
+
+
+/* ==============================
+   MICROSOFT 365 SECTION
+================================ */
+
+.m365-section {
+    padding: 85px 9%;
+    background: linear-gradient(120deg, #f5f8ff, #e5edff);
+}
+
+.m365-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+}
+
+.m365-text {
+    flex: 1;
+}
+
+.m365-text h2 {
+    font-size: 40px;
+    line-height: 1.3;
+    color: #171717;
+    margin-bottom: 20px;
+}
+
+.m365-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #505050;
+    margin-bottom: 30px;
+}
+
+.m365-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.m365-image img {
+    width: 100%;
+    max-width: 500px;
+    height: 320px;
+    /* object-fit: contain; */
+    border-radius: 8px;
+}
+
+
+/* ==============================
+   MICROSOFT COPILOT SECTION
+================================ */
+
+.copilot-section {
+    padding: 85px 9%;
+    background: linear-gradient(120deg, #171b38, #29245c);
+    color: #ffffff;
+}
+
+.copilot-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+}
+
+.copilot-image {
+    flex: 1;
+}
+
+.copilot-image img {
+    width: 100%;
+    max-width: 520px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.copilot-text {
+    flex: 1;
+}
+
+.copilot-text .section-tag {
+    color: #b6a7ff;
+}
+
+.copilot-text h2 {
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.copilot-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #dedcf0;
+    margin-bottom: 30px;
+}
+
+
+/* ==============================
+   MICROSOFT ONEDRIVE SECTION
+================================ */
+
+.onedrive-section {
+    padding: 85px 9%;
+    background-color: #f5f8fc;
+    color: #1b1b1b;
+}
+
+.onedrive-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+}
+
+.onedrive-text {
+    flex: 1;
+}
+
+.onedrive-text .section-tag {
+    color: #0078d4;
+}
+
+.onedrive-text h2 {
+    font-size: 40px;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.onedrive-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.onedrive-image {
+    flex: 1;
+}
+
+.onedrive-image img {
+    width: 100%;
+    max-width: 520px;
+    height: 330px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+/* ==============================
+   EDGE SECTION
+================================ */
+
+.edge-section {
+    padding: 80px 9%;
+    background-color: #ffffff;
+}
+
+.edge-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 65px;
+}
+
+.edge-image {
+    flex: 1;
+}
+
+.edge-image img {
+    width: 100%;
+    max-width: 520px;
+    height: 330px;
+    object-fit: cover;
+}
+
+.edge-text {
+    flex: 1;
+}
+
+.edge-text h2 {
+    font-size: 35px;
+    line-height: 1.3;
+    color: #171717;
+    margin-bottom: 18px;
+}
+
+.edge-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555555;
+    margin-bottom: 28px;
+}
+
+
+/* ==============================
+   BUSINESS & EDUCATION SECTION
+================================ */
+
+.business-section {
+    padding: 85px 9%;
+    background: #ffffff;
+    color: #1b1b1b;
+}
+
+.business-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 65px;
+}
+
+.business-text {
+    flex: 1;
+}
+
+.business-text .section-tag {
+    color: #0078d4;
+}
+
+.business-text h2 {
+    font-size: 40px;
+    line-height: 1.3;
+    margin: 18px 0;
+}
+
+.business-text p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.business-buttons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.education-button {
+    display: inline-block;
+    padding: 13px 25px;
+    background-color: transparent;
+    color: #0067b8;
+    font-size: 14px;
+    font-weight: 600;
+    border: 1px solid #0067b8;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.education-button:hover {
+    background-color: #0067b8;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.business-image {
+    flex: 1;
+}
+
+.business-image img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+
+/* ==============================
+   FOOTER
+================================ */
+
+.footer {
+    background-color: #f2f2f2;
+    padding: 50px 8% 20px;
+    color: #505050;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    padding-bottom: 30px;
+}
+
+.footer-brand h3 {
+    font-size: 23px;
+    color: #262626;
+    margin-bottom: 8px;
+}
+
+.footer-brand p {
+    font-size: 14px;
+    max-width: 400px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #505050;
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-bottom {
+    border-top: 1px solid #d5d5d5;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 13px;
+}
+
+
+/* ==============================
+   TABLET RESPONSIVE
+================================ */
+
+@media (max-width: 1024px) {
+
+    .navbar {
+        padding: 15px 4%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links,
+    .nav-right {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero-content {
+        width: 65%;
+    }
+
+    .products {
+        padding: 60px 5%;
+    }
+
+    .product-container {
+        gap: 18px;
+    }
+
+    .product-card {
+        padding: 20px;
+    }
+
+    .edge-content {
+        gap: 35px;
+    }
+}
+
+
+/* ==============================
+   MOBILE RESPONSIVE
+================================ */
+
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        padding: 18px 5%;
+        gap: 17px;
+    }
+
+    .nav-links,
+    .nav-right {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    .navbar nav a,
+    .nav-right a {
+        font-size: 13px;
+    }
+
+    .hero {
+        min-height: 400px;
+        padding: 55px 7%;
+        background-position: center;
+    }
+
+    .hero-content {
+        width: 100%;
+        max-width: 550px;
+    }
+
+    .hero-content h1 {
+        font-size: 35px;
+    }
+
+    .hero-content p {
+        font-size: 15px;
+    }
+
+    .products {
+        padding: 55px 6%;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .product-container {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .product-card {
+        width: 100%;
+    }
+
+    .card-image {
+        height: 190px;
+    }
+
+    .surface-section {
+        padding: 55px 7%;
+    }
+
+    .surface-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .surface-text h2 {
+        font-size: 29px;
+    }
+
+    .surface-image img {
+        height: 230px;
+    }
+
+    .windows-section {
+        padding: 55px 7%;
+    }
+
+    .windows-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .windows-text h2 {
+        font-size: 29px;
+    }
+
+    .windows-text p {
+        font-size: 15px;
+    }
+
+    .windows-image img {
+        height: 230px;
+    }
+
+    .xbox-section {
+        padding: 55px 7%;
+    }
+
+    .xbox-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 35px;
+    }
+
+    .xbox-image img {
+        height: 240px;
+    }
+
+    .xbox-text h2 {
+        font-size: 30px;
+    }
+
+    .xbox-text p {
+        font-size: 15px;
+    }
+
+    .m365-section {
+        padding: 55px 7%;
+    }
+
+    .m365-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .m365-text h2 {
+        font-size: 29px;
+    }
+
+    .m365-text p {
+        font-size: 15px;
+    }
+
+    .m365-image img {
+        height: 230px;
+    }
+
+    .copilot-section {
+        padding: 55px 7%;
+    }
+
+    .copilot-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .copilot-image img {
+        height: 230px;
+    }
+
+    .copilot-text h2 {
+        font-size: 29px;
+    }
+
+    .copilot-text p {
+        font-size: 15px;
+    }
+
+    .onedrive-section {
+        padding: 55px 7%;
+    }
+
+    .onedrive-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .onedrive-image img {
+        height: 230px;
+    }
+
+    .onedrive-text h2 {
+        font-size: 29px;
+    }
+
+    .onedrive-text p {
+        font-size: 15px;
+    }
+
+    .edge-section {
+        padding: 40px 6%;
+    }
+
+    .edge-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 25px;
+    }
+
+    .edge-image img {
+        height: 190px;
+    }
+
+    .edge-text h2 {
+        font-size: 28px;
+    }
+
+    .edge-text p {
+        font-size: 15px;
+    }
+
+    .business-section {
+        padding: 55px 7%;
+    }
+
+    .business-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .business-buttons {
+        justify-content: center;
+    }
+
+    .business-text h2 {
+        font-size: 29px;
+    }
+
+    .business-text p {
+        font-size: 15px;
+    }
+
+    .business-image img {
+        height: 230px;
+    }
+
+    .footer {
+        padding: 40px 6% 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+
+/* ==============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 480px) {
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .hero {
+        min-height: 360px;
+        padding: 45px 6%;
+    }
+
+    .hero-content h1 {
+        font-size: 30px;
+    }
+
+    .hero-content p {
+        font-size: 14px;
+    }
+
+    .primary-button {
+        padding: 12px 18px;
+        font-size: 13px;
+    }
+
+    .section-heading h2 {
+        font-size: 24px;
+    }
+
+    .product-card h3 {
+        font-size: 20px;
+    }
+
+    .windows-text h2 {
+        font-size: 26px;
+    }
+
+    .windows-image img {
+        height: 200px;
+    }
+
+    .xbox-text h2 {
+        font-size: 26px;
+    }
+
+    .xbox-image img {
+        height: 200px;
+    }
+
+    .m365-text h2 {
+        font-size: 26px;
+    }
+
+    .m365-image img {
+        height: 200px;
+    }
+
+    .copilot-text h2 {
+        font-size: 26px;
+    }
+
+    .copilot-image img {
+        height: 200px;
+    }
+
+    .onedrive-text h2 {
+        font-size: 26px;
+    }
+
+    .onedrive-image img {
+        height: 200px;
+    }
+
+    .edge-text h2 {
+        font-size: 25px;
+    }
+
+    .business-text h2 {
+        font-size: 26px;
+    }
+
+    .business-buttons {
+        flex-direction: column;
+    }
+
+    .business-image img {
+        height: 200px;
+    }
+}
+
